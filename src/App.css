@@ -1,0 +1,23 @@
+/* App CSS - Styles are primarily managed by Tailwind CSS */
+
+/* Optional: Add any custom animations or specific component styles here */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
