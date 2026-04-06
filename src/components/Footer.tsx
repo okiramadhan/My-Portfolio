@@ -1,4 +1,4 @@
-import { FiGithub, FiLinkedin, FiMail, FiHeart } from 'react-icons/fi';
+import { FiLinkedin, FiMail, FiHeart } from 'react-icons/fi';
 import { PERSONAL_INFO } from '../constants';
 
 export const Footer = () => {

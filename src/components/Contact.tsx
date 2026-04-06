@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { PERSONAL_INFO, SOCIAL_LINKS } from '../constants';
-import { FiMail, FiPhone, FiMapPin, FiLinkedin, FiGithub, FiInstagram } from 'react-icons/fi';
+import { FiMail, FiPhone, FiMapPin, FiLinkedin, FiInstagram } from 'react-icons/fi';
 
 export const Contact = () => {
   const [formData, setFormData] = useState({
