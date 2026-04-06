@@ -15,7 +15,7 @@ export const Footer = () => {
               Muhammad Oki Ramadhan
             </h3>
             <p className="text-gray-400">
-              Full-stack software developer specializing in React, Flutter, and mobile development.
+              Software Developer specializing in React, Flutter, and mobile development.
             </p>
           </div>
 
