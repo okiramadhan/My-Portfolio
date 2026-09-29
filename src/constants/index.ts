@@ -79,7 +79,7 @@ export const PROJECTS: Project[] = [
     description: 'Mobile application for employee attendance management developed for BUMD Pasar Jaya Jakarta. Features real-time attendance tracking, employee data management, absence reporting, and seamless synchronization across multiple devices. Built with Flutter for cross-platform compatibility (iOS & Android).',
     image: '/images/hris-pasar-jaya.png',
     technologies: ['Flutter', 'Dart', 'Firebase', 'Mobile Development'],
-    demoLink: 'https://play.google.com/store/apps/details?id=com.digitak.siabsen&hl=id',
+    demoLink: 'https://play.google.com/store/apps/details?id=com.digitak.siabsen&pcampaignid=web_share',
     githubLink: '#',
   },
   {
@@ -88,7 +88,16 @@ export const PROJECTS: Project[] = [
     description: 'Web-based portal for Direktorat Jenderal Kereta Api (DJKA), Ministry of Transportation. A comprehensive platform for managing railway operations, scheduling, and administrative tasks. Built with React.js to deliver a responsive, efficient, and user-friendly interface for national railway data management.',
     image: '/images/djka.png',
     technologies: ['React.js', 'TypeScript', 'Web Development', 'Government IT'],
-    demoLink: 'https://portal.djka.kemenhub.go.id',
+    demoLink: 'https://portal.djka.kemenhub.go.id/',
+    githubLink: '#',
+  },
+  {
+    id: 3,
+    title: 'BumDesMartNukita - Village MSME Digital Marketplace',
+    description: 'Enterprise full-stack marketplace platform empowering local MSMEs in Desa Lengkong, Bandung. Features a 5-role RBAC architecture (Super Admin, BUMDes, Seller, Courier, Customer), live courier tracking with Leaflet, real-time analytics with ApexCharts, automated Midtrans payment gateway, WhatsApp & FCM notifications, and high-performance background job processing.',
+    image: '/images/bumdesmartnukita.png',
+    technologies: ['Next.js (App Router)', 'Laravel 12', 'TypeScript', 'Tailwind CSS v4', 'Midtrans', 'Leaflet', 'Redis', 'MySQL'],
+    demoLink: 'https://bumdesmartnukita.com/',
     githubLink: '#',
   },
 ];
