@@ -1,4 +1,3 @@
-import { useDarkMode } from './hooks/useDarkMode';
 import {
   Navbar,
   Hero,
@@ -12,12 +11,10 @@ import {
 import './App.css';
 
 function App() {
-  const { isDark, toggle } = useDarkMode();
-
   return (
     <>
       {/* Navbar */}
-      <Navbar isDark={isDark} toggleDarkMode={toggle} />
+      <Navbar />
 
       {/* Main Content */}
       <main>
