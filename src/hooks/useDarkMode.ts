@@ -7,9 +7,9 @@ export const useDarkMode = () => {
       if (saved !== null) {
         return JSON.parse(saved);
       }
-      return window.matchMedia('(prefers-color-scheme: dark)').matches;
+      return true; // Default to dark mode for rich dark portfolio look
     }
-    return false;
+    return true;
   });
 
   useEffect(() => {

@@ -54,15 +54,18 @@ export const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-white dark:bg-slate-900 transition-colors duration-300">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="py-24 bg-slate-50/50 dark:bg-slate-900/50 transition-colors duration-300 relative overflow-hidden">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Title */}
         <div className="text-center mb-16 animate-slideInUp">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            Get In <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-500">Touch</span>
+          <span className="text-xs uppercase tracking-widest font-bold text-blue-600 dark:text-cyan-400 mb-2 block">
+            Let's Talk
+          </span>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-4 tracking-tight">
+            Get In <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-cyan-400 to-teal-400">Touch</span>
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto rounded-full"></div>
-          <p className="mt-6 text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto rounded-full"></div>
+          <p className="mt-4 text-base md:text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             Have a question or want to collaborate? Feel free to reach out! I'm always open to discussing new opportunities and projects.
           </p>
         </div>
@@ -76,18 +79,18 @@ export const Contact = () => {
               <a
                 key={index}
                 href={method.href}
-                className="animate-slideInUp p-6 bg-gray-50 dark:bg-slate-800 rounded-xl hover:shadow-lg hover:scale-105 transition-all duration-300 text-center"
+                className="animate-slideInUp p-7 bg-white dark:bg-slate-800/90 rounded-2xl border border-gray-200/80 dark:border-slate-700/80 shadow-md hover:shadow-xl hover:border-blue-500/50 hover:-translate-y-1.5 transition-all duration-300 text-center backdrop-blur-sm group"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="flex justify-center mb-4">
-                  <div className="p-4 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg text-white">
-                    <Icon size={28} />
+                  <div className="p-3.5 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-xl text-white shadow-md shadow-blue-500/20 group-hover:scale-110 transition-transform duration-300">
+                    <Icon size={24} />
                   </div>
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
+                <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-1 group-hover:text-blue-500 dark:group-hover:text-cyan-400 transition-colors">
                   {method.label}
                 </h3>
-                <p className="text-gray-700 dark:text-gray-300 break-all">{method.value}</p>
+                <p className="text-sm text-gray-600 dark:text-gray-300 break-all">{method.value}</p>
               </a>
             );
           })}

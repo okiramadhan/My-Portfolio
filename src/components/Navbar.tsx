@@ -17,26 +17,26 @@ export const Navbar = ({ isDark, toggleDarkMode }: NavbarProps) => {
   };
 
   return (
-    <nav className="fixed w-full top-0 z-50 bg-white dark:bg-slate-900 shadow-md transition-colors duration-300">
+    <nav className="fixed w-full top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-gray-200/60 dark:border-slate-800/80 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
             <button
               onClick={() => handleNavClick('home')}
-              className="text-2xl font-bold bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent hover:opacity-80 transition-opacity"
+              className="text-2xl font-extrabold tracking-tight bg-gradient-to-r from-blue-500 via-cyan-400 to-teal-400 bg-clip-text text-transparent hover:opacity-90 transition-opacity"
             >
-              okiramadhan
+              okiramadhan<span className="text-cyan-400">.</span>
             </button>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-1">
+          <div className="hidden md:flex items-center space-x-1 bg-gray-100/70 dark:bg-slate-800/60 p-1.5 rounded-full border border-gray-200/50 dark:border-slate-700/50">
             {NAVIGATION_LINKS.map((link) => (
               <button
                 key={link.id}
                 onClick={() => handleNavClick(link.id)}
-                className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                className="px-4 py-1.5 rounded-full text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-white hover:bg-gradient-to-r hover:from-blue-600 hover:to-cyan-600 transition-all duration-300"
               >
                 {link.label}
               </button>

@@ -3,15 +3,18 @@ import { FiExternalLink, FiGithub } from 'react-icons/fi';
 
 export const Projects = () => {
   return (
-    <section id="projects" className="py-20 bg-gray-50 dark:bg-slate-800 transition-colors duration-300">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="projects" className="py-24 bg-white dark:bg-slate-900 transition-colors duration-300 relative overflow-hidden">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Title */}
         <div className="text-center mb-16 animate-slideInUp">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-500">Projects</span>
+          <span className="text-xs uppercase tracking-widest font-bold text-blue-600 dark:text-cyan-400 mb-2 block">
+            Portfolio Showcase
+          </span>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-4 tracking-tight">
+            Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-cyan-400 to-teal-400">Projects</span>
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto rounded-full"></div>
-          <p className="mt-6 text-lg text-gray-600 dark:text-gray-400">
+          <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto rounded-full"></div>
+          <p className="mt-4 text-base md:text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             A selection of my recent projects showcasing my expertise in web and mobile development
           </p>
         </div>
@@ -23,7 +26,6 @@ export const Projects = () => {
             const hasGithub = Boolean(project.githubLink && project.githubLink !== '#');
 
             const handleCardClick = (e: React.MouseEvent<HTMLDivElement>) => {
-              // If click happened inside an interactive element like a button or link, don't trigger card redirect
               const target = e.target as HTMLElement;
               if (target.closest('a') || target.closest('button')) {
                 return;
@@ -37,23 +39,23 @@ export const Projects = () => {
               <div
                 key={project.id}
                 onClick={handleCardClick}
-                className={`animate-slideInUp group flex flex-col h-full bg-white dark:bg-slate-900 rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 ${
+                className={`animate-slideInUp group flex flex-col h-full bg-white dark:bg-slate-800/90 rounded-2xl border border-gray-200/80 dark:border-slate-700/80 shadow-md overflow-hidden hover:shadow-2xl hover:border-blue-500/50 transition-all duration-300 hover:-translate-y-2 backdrop-blur-sm ${
                   hasDemo ? 'cursor-pointer' : ''
                 }`}
                 style={{ animationDelay: `${index * 0.1}s` }}
                 title={hasDemo ? `Buka ${project.title}` : undefined}
               >
                 {/* Image Container */}
-                <div className="relative h-48 bg-gray-300 dark:bg-slate-700 overflow-hidden">
+                <div className="relative h-52 bg-slate-100 dark:bg-slate-900/80 overflow-hidden flex items-center justify-center p-2">
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-t-xl"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                     {hasDemo && (
-                      <span className="text-white text-xs font-semibold flex items-center gap-1.5 bg-black/60 px-3 py-1 rounded-full backdrop-blur-sm">
-                        <span>Kunjungi Website / Aplikasi</span>
+                      <span className="text-white text-xs font-semibold flex items-center gap-1.5 bg-black/70 px-3.5 py-1.5 rounded-full backdrop-blur-md border border-white/20">
+                        <span>Buka Website / App</span>
                         <FiExternalLink />
                       </span>
                     )}
@@ -62,11 +64,11 @@ export const Projects = () => {
 
                 {/* Content */}
                 <div className="p-6 flex flex-col flex-grow">
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-blue-500 dark:group-hover:text-cyan-400 transition-colors line-clamp-2">
+                  <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition-colors line-clamp-2">
                     {project.title}
                   </h3>
 
-                  <p className="text-gray-600 dark:text-gray-400 mb-4 flex-grow line-clamp-4 leading-relaxed text-sm">
+                  <p className="text-slate-700 dark:text-slate-300 mb-4 flex-grow line-clamp-4 leading-relaxed text-sm">
                     {project.description}
                   </p>
 

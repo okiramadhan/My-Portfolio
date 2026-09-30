@@ -1,5 +1,5 @@
-import { FiLinkedin, FiMail, FiHeart } from 'react-icons/fi';
-import { PERSONAL_INFO } from '../constants';
+import { FiLinkedin, FiMail, FiHeart, FiInstagram } from 'react-icons/fi';
+import { SOCIAL_LINKS } from '../constants';
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -48,23 +48,32 @@ export const Footer = () => {
 
           {/* Social Links */}
           <div>
-            <h4 className="text-lg font-bold mb-4">Follow Me</h4>
+            <h4 className="text-lg font-bold mb-4">Connect</h4>
             <div className="flex gap-4">
               <a
-                href={PERSONAL_INFO.email}
-                className="p-3 bg-gray-800 rounded-lg hover:bg-red-500 transition-all duration-300 hover:scale-110"
-                aria-label="Email"
-              >
-                <FiMail size={20} />
-              </a>
-              <a
-                href="https://linkedin.com"
+                href={SOCIAL_LINKS[0].url}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-gray-800 rounded-lg hover:bg-blue-600 transition-all duration-300 hover:scale-110"
                 aria-label="LinkedIn"
               >
                 <FiLinkedin size={20} />
+              </a>
+              <a
+                href={SOCIAL_LINKS[1].url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 bg-gray-800 rounded-lg hover:bg-pink-600 transition-all duration-300 hover:scale-110"
+                aria-label="Instagram"
+              >
+                <FiInstagram size={20} />
+              </a>
+              <a
+                href={SOCIAL_LINKS[2].url}
+                className="p-3 bg-gray-800 rounded-lg hover:bg-red-500 transition-all duration-300 hover:scale-110"
+                aria-label="Email"
+              >
+                <FiMail size={20} />
               </a>
             </div>
           </div>

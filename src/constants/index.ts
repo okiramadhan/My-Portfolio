@@ -2,12 +2,12 @@ import type { Project, Skill, Experience, Education, SocialLink } from '../types
 
 export const PERSONAL_INFO = {
   name: 'Muhammad Oki Ramadhan',
-  title: 'Software Developer',
-  subtitle: 'Software Developer | React.js, Flutter, React Native |',
+  title: 'Frontend Developer',
+  subtitle: 'Frontend Developer | React.js, Next.js, Flutter, React Native, TypeScript',
   email: 'okiramadhan05@gmail.com',
-  phone: '+62 895 352 458 582',
-  location: 'Kota Bandung, Indonesia',
-  bio: 'A dedicated Software Developer with a passion for building beautiful and functional web and mobile applications. Currently studying at Semester 6 while working as a part-time contractor specializing in React.js, Flutter, React Native, and TypeScript.',
+  phone: '+62 877-9218-4448',
+  location: 'Bandung, West Java, Indonesia',
+  bio: 'A passionate Frontend & Mobile Developer specializing in React.js, Next.js, Flutter, React Native, and TypeScript. Experienced in building enterprise systems, mobile applications, and high-performance digital platforms.',
 };
 
 export const SOCIAL_LINKS: SocialLink[] = [
@@ -31,33 +31,50 @@ export const SOCIAL_LINKS: SocialLink[] = [
 export const SKILLS: Skill[] = [
   {
     category: 'Frontend',
-    skills: ['React.js', 'React Native', 'TypeScript', 'HTML5', 'CSS3', 'Tailwind CSS', 'Redux'],
+    skills: ['React.js', 'Next.js', 'TypeScript', 'Tailwind CSS', 'HTML5', 'CSS3', 'Redux', 'Laravel'],
   },
   {
     category: 'Mobile',
-    skills: ['Flutter', 'React Native', 'Dart', 'Firebase'],
+    skills: ['Flutter', 'React Native', 'Dart', 'Android Development', 'iOS Development', 'Firebase'],
   },
   {
     category: 'Tools & Others',
-    skills: ['Git', 'GitHub', 'VS Code', 'Postman', 'npm'],
+    skills: ['Git', 'GitHub', 'VS Code', 'Postman', 'RESTful API', 'Leaflet', 'ApexCharts'],
   },
 ];
 
 export const EXPERIENCE: Experience[] = [
   {
     id: 1,
-    company: 'Current Company',
-    position: 'Software Developer (Part-Time)',
-    duration: '1 year contract',
-    startDate: 'September 1, 2025',
-    endDate: 'September 1, 2026',
+    company: 'PT. Metanouva Informatika (Digitak)',
+    position: 'Frontend Developer (Full-time)',
+    duration: 'Present',
+    startDate: 'September 2026',
+    endDate: 'Present',
     description: [
-      'Develop responsive web applications using React.js and TypeScript',
-      'Build mobile applications with Flutter and React Native',
-      'Collaborate with team members using Git and modern development practices',
-      'Implement RESTful APIs and integrate with backend services',
+      'Architect and build high-performance web applications and mobile solutions',
+      'Develop modern frontend interfaces with Next.js, React.js, and TypeScript',
+      'Implement complex multi-role systems, state management, and real-time features',
+      'Collaborate closely with cross-functional teams to deliver scalable enterprise products',
     ],
-    technologies: ['React.js', 'React Native', 'Flutter', 'TypeScript', 'Firebase'],
+    technologies: ['Next.js', 'React.js', 'Flutter', 'TypeScript', 'Tailwind CSS', 'Laravel'],
+  },
+  {
+    id: 2,
+    company: 'PT. Metanouva Informatika (Digitak)',
+    position: 'Frontend Developer (Part-time)',
+    duration: '1 yr',
+    startDate: 'September 2025',
+    endDate: 'August 2026',
+    description: [
+      'Developing web and mobile applications for government sector clients',
+      'Mobile App: Built Pasar Jaya attendance system using Flutter (Android & iOS)',
+      'Web App: Created Portal DJKA frontend using React.js with responsive design',
+      'Integrated REST APIs and implemented state management (Provider, Redux)',
+      'Collaborated with cross-functional teams using Agile methodology',
+      'Conducted testing and optimization for improved performance',
+    ],
+    technologies: ['Flutter', 'React.js', 'TypeScript', 'Redux', 'REST API', 'Firebase'],
   },
 ];
 
@@ -67,7 +84,7 @@ export const EDUCATION: Education[] = [
     school: 'Universitas Kebangsaan Republik Indonesia',
     degree: 'Degree',
     field: 'Computer Science',
-    year: 'Semester 6 (Currently Studying)',
+    year: 'Semester 7 (Currently Studying)',
     description: 'Focusing on software development',
   },
 ];
@@ -80,7 +97,6 @@ export const PROJECTS: Project[] = [
     image: '/images/hris-pasar-jaya.png',
     technologies: ['Flutter', 'Dart', 'Firebase', 'Mobile Development'],
     demoLink: 'https://play.google.com/store/apps/details?id=com.digitak.siabsen&pcampaignid=web_share',
-    githubLink: '#',
   },
   {
     id: 2,
@@ -89,7 +105,6 @@ export const PROJECTS: Project[] = [
     image: '/images/djka.png',
     technologies: ['React.js', 'TypeScript', 'Web Development', 'Government IT'],
     demoLink: 'https://portal.djka.kemenhub.go.id/',
-    githubLink: '#',
   },
   {
     id: 3,
@@ -98,7 +113,6 @@ export const PROJECTS: Project[] = [
     image: '/images/bumdesmartnukita.png',
     technologies: ['Next.js (App Router)', 'Laravel 12', 'TypeScript', 'Tailwind CSS v4', 'Midtrans', 'Leaflet', 'Redis', 'MySQL'],
     demoLink: 'https://bumdesmartnukita.com/',
-    githubLink: '#',
   },
 ];
 
